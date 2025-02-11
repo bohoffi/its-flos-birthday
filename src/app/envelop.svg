@@ -1,0 +1,21 @@
+<svg class="envelope" viewBox="0 0 200 200">
+    <style>
+        .envelope-body,
+        .envelope-lid {
+            fill: #ffffff;
+            stroke-width: 1px;
+            stroke: black;
+        }
+    </style>
+    <!-- Envelope body -->
+    <rect x="10" y="50" width="180" height="100" class="envelope-body" />
+
+    <!-- Gift card -->
+    <rect x="30" y="60" width="140" height="80" class="gift-card" />
+
+    <polygon points="10,50 100,90 190,50 190,150 10,150" class="envelope-body" />
+
+    <!-- Envelope lid -->
+    <polygon points="10,50 100,110 190,50" class="envelope-lid" />
+
+</svg>

@@ -1,0 +1,87 @@
+.envelope-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .envelope {
+    width: 200px;
+    height: 200px;
+    animation: envelopeRotation 1s 1s forwards;
+
+    // fill, stroke
+    .envelope-body,
+    .envelope-lid {
+      fill: #ffffff;
+      stroke-width: 1px;
+      stroke: black;
+    }
+
+    .envelope-lid {
+      animation: openLid 1s forwards;
+    }
+
+    .envelope-body {
+      animation: envelopeSlideAndFade 1s 2s forwards;
+    }
+
+    .gift-card {
+      fill: #ffcc00;
+      animation: giftCardSlideOut 1s 2s forwards,
+        giftCardCenterScale 1s 3s forwards;
+    }
+  }
+}
+
+@keyframes envelopeRotation {
+  to {
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes openLid {
+  to {
+    transform: rotateX(90deg);
+  }
+}
+
+@keyframes giftCardSlideOut {
+  to {
+    transform: translateY(-25%);
+  }
+}
+@keyframes giftCardCenterScale {
+  to {
+    transform: translateY(-50%) scale(200%);
+  }
+}
+
+@keyframes envelopeSlideAndFade {
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+div.gift-card-text {
+  font-size: larger;
+  font-weight: bold;
+  text-align: center;
+  // opacity: 0;
+  // animation: textReveal 2s 3s forwards;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  max-width: 90dvw;
+  margin: 0 auto;
+
+  .post-scriptum {
+    font-size: x-small;
+  }
+}
+
+@keyframes textReveal {
+  // from {
+  //   opacity: 0;
+  // }
+  to {
+    opacity: 1;
+  }
+}

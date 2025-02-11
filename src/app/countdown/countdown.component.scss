@@ -1,0 +1,28 @@
+section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
+  place-items: center;
+
+  gap: 0.25rem;
+
+  width: 95dvw;
+  max-width: 400px;
+  margin: 0 auto;
+
+  .numbers {
+    background: var(--on-surface);
+    color: var(--surface);
+    padding: 0.5rem;
+    font-size: xx-large;
+    width: 2rem;
+    text-align: center;
+  }
+
+  :not(.numbers) {
+    padding: 0.5rem;
+    font-size: large;
+    text-align: center;
+  }
+}

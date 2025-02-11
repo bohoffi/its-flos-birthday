@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { CountdownComponent } from './countdown/countdown.component';
+import { GiftCardComponent } from './gift-card/gift-card.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [CountdownComponent, GiftCardComponent],
 })
 export class AppComponent {
-  title = 'its-flos-birthday';
+  title = "It's Flo's Birthday!";
+
+  protected readonly isRunning = signal(true);
 }
